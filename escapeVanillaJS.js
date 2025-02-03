@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+/*------------------------------------------------------Room 1----------------------------------------------------------------------*/
     // 🪲 Bug: Incorrect ID used for attaching the event listener
     document.getElementById("solveRoom").addEventListener("click", () => {
         fetch('books.json') 
@@ -10,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
     });
 
+/*------------------------------------------------------Room 2----------------------------------------------------------------------*/
     document.getElementById("solveRoom2").addEventListener("click", () => {
         const jsConcepts = new Set(['closure', 'scope', 'hoisting']);
         // 🪲 Bug: What's mssing from JS concepts?
@@ -19,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("room2Result").textContent = `The code to unlock the door is: ${Array.from(commonConcepts).join(', ')}`;
     });
 
+/*------------------------------------------------------Room 3----------------------------------------------------------------------*/
     // 🪲 Bug: Asynchronous function ?
     document.getElementById("solveRoom3").addEventListener("click", () => {
         fetch('directions.json') 
@@ -33,6 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+
+/*------------------------------------------------------Methods----------------------------------------------------------------------*/
 function findMostRecentBook(books) {
     // 🪲 Bug: Logic error
     return books.reduce((mostRecent, book) => new Date(book.published) < new Date(mostRecent.published) ? book : mostRecent);
