@@ -28,7 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /*------------------------------------------------------Room 3----------------------------------------------------------------------*/
     // 🪲 Bug: Asynchronous function ?
-    document.getElementById("solveRoom3").addEventListener("click", () => {
+    // add async to anonymous function
+    document.getElementById("solveRoom3").addEventListener("click", async () => {
         fetch('directions.json') 
             .then(response => response.json())
             .then(directions => {
