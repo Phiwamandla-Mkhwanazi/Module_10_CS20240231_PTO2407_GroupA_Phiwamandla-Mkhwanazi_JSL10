@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(books => {
                 const mostRecentBook = findMostRecentBook(books);
                 // 🪲 Bug: Incorrect element ID
-                document.getElementById("resultRoom1").textContent = `The key to the next room is: ${mostRecentBook.title}`;
+                //Paragraph Id update
+                document.getElementById("room1Result").textContent = `The key to the next room is: ${mostRecentBook.title}`;
             });
     });
 
