@@ -21,7 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const jsConcepts = new Set(['closure', 'scope', 'hoisting','async']);
         const reactConcepts = new Set(['components', 'jsx', 'hooks', 'async']);
         // 🪲 Bug: Incorrect function call
-        const commonConcepts = findIntersection(jsConcepts, jsConcepts);
+        //2nd argument is reactConcept - logical error
+        const commonConcepts = findIntersection(jsConcepts, reactConcepts);
         document.getElementById("room2Result").textContent = `The code to unlock the door is: ${Array.from(commonConcepts).join(', ')}`;
     });
 
